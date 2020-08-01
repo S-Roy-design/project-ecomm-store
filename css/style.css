@@ -1,1 +1,100 @@
 /* Note there a few "reset" styles given in reset.css. You may opt to remove those if you wish. */
+
+body {
+    font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.search--component {
+    display: flex;
+    }
+    
+.search--component--field {
+    box-sizing: border-box;
+    background-color: lightslategray;
+    color: #222;
+    font-size: 1em;
+    font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+    border: 0.25em solid black;
+    line-height: 2;
+    padding: 0.5em;
+    border-radius: 1em 0 0 1em;
+    flex-grow: 1;
+}
+
+.search--component--field--btn {
+    font-size: 1em;
+    font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(141, 71, 255);
+    color: #fff;
+    border: none;
+    line-height: 2;
+    padding: 0.5em;
+    border-radius: 0 1em 1em 0;
+    flex-basis: 5em;
+    text-shadow: 1px 1px 0;
+}
+
+.filter--header {
+    font-size: 1em;
+    font-weight: 700;
+
+}
+
+.product {
+    background-color: lightgray;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: lime;
+    margin: 1em 0;
+}
+
+.product--lead {
+    margin: 0;
+}
+
+.product--lead--image {
+    margin: 0;
+    max-width: 100%;
+    display: block;
+
+}
+
+.product--lead--copy {
+    font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+
+
+}
+
+.product--lead--copy--form {
+    font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.product--lead--copy--form--colors--red {
+    color: red;
+}
+
+.product--lead--copy--form--colors--white {
+    color: white;
+}
+
+.product--lead--copy--form--colors--blue {
+    color: blue;
+}
+.product--lead--copy--form--end--button{
+    font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+
+
+}
+
+.ending {
+    background-color: rgb(133, 133, 133);
+    color: whitesmoke;
+}
+
+.ending--text {
+    color: white;
+    font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+
+}

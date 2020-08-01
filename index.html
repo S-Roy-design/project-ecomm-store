@@ -22,26 +22,26 @@
           <span class="material-icons">menu</span>
         </button>
         <ul>
-          <li><a href="#">Category</a>
+          <li><a href="#">Women</a>
             <ul>
-              <li><a href="#">Subcategory</a></li>
-              <li><a href="#">Subcategory</a></li>
-              <li><a href="#">Subcategory</a></li>
+              <li><a href="#">Casual sneakers</a></li>
+              <li><a href="#">Athletic shoes</a></li>
+              <li><a href="#">Hybrids</a></li>
             </ul>
           </li>
-          <li><a href="#">Category</a></li>
-          <li><a href="#">Category</a></li>
-          <li><a href="#">Category</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Kids</a></li>
+          <li><a href="#">Our story</a></li>
         </ul>
       </nav>
 
       <!-- Search for a product (non-functional) -->
-      <form>
+      <div class="search--component">
         <label>Search
-          <input type="search" name="find" id="find">
+          <input type="search" name="find" value="" class="search--component--field" id="find">
         </label>
-        <button type="button"><span class="material-icons">search</span></button>
-      </form>
+        <button type="button" class="search--component--field--btn"><span class="material-icons">search</span></button>
+      </div>
 
       <!-- Additional nav links -->
 
@@ -53,68 +53,53 @@
 
     <main>
       <header>
-        <h1>Sale on [Category Name]</h1>
+        <h1>Sale on Hybrids</h1>
 
         <!-- Filtering product form -->
         <form>
           <h2>Filters</h2>
-          <fieldset>
-            <label for="sort">Show</label>
+          <section class="filter--price">
+            <label for="sort" class="filter--header">Show</label>
             <select name="sort" id="sort">
               <option value="price-high">Price, highest to lowest</option>
               <option value="price-low">Price, lowest to highest</option>
               <option value="newest">Newest releases</option>
             </select>
-          </fieldset>
-          <fieldset>
-            <legend>Colour</legend>
+          </section>
+          <section class="filter--color">
+            <legend class="filter--header">Colour</legend>
             <ul>
-              <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
-              <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
-              <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
-              <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
-              <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
+              <li><input type="color" name="colour" value="black" id="black"> <label for="black">Black</label></li>
+              <li><input type="color" name="colour" value="white" id="white"> <label for="white">White</label></li>
+              <li><input type="color" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
+              <li><input type="color" name="colour" value="red" id="red"> <label for="red">Red</label></li>
+              <li><input type="color" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
             </ul>
-          </fieldset>
-          <fieldset>
-            <legend>Sizes</legend>
-            <ol>
-              <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
-              <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
-              <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
-              <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
-              <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
-            </ol>
-          </fieldset>
-          <fieldset>
-            <legend>Ratings (above)</legend>
-            <ol>
+          </section>
+          <section class="filter--size">
+            <legend class="filter--header">Sizes</legend>
+            <ul>
+              <li><input type="radio" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
+              <li><input type="radio" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
+              <li><input type="radio" name="size" value="md" id="md"> <label for="md">M</label></li>
+              <li><input type="radio" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
+              <li><input type="radio" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
+            </ul>
+          </section>
+          <section class="filter--product-type">
+            <legend class="filter--header">Product Type</legend>
+            <ul>
               <li>
-                <input type="radio" name="rating" value="4" id="aboveFour">
-                <label for="aboveFour">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
-                </label>
+                <input type="checkbox" name="product-type" value="running" id="running"> <label for="running">Running</label>
               </li>
               <li>
-                <input type="radio" name="rating" value="3" id="aboveThree">
-                <label for="aboveThree">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
-                </label>
+                <input type="checkbox" name="product-type" value="lifestyle" id="lifestyle"> <label for="lifestyle">Lifestyle</label>
               </li>
               <li>
-                <input type="radio" name="rating" value="2" id="aboveTwo">
-                <label for="aboveTwo">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
-                </label>
+                <input type="checkbox" name="product-type" value="ltd-edition" id="ltd-edition"> <label for="ltd-edition">Limited Edition</label>
               </li>
-              <li>
-                <input type="radio" name="rating" value="1" id="aboveOne">
-                <label for="aboveOne">
-                  <span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
-                </label>
-              </li>
-            </ol>
-          </fieldset>
+            </ul>
+          </section>
         </form>
       </header>
 
@@ -122,32 +107,34 @@
         <h2>Results</h2>
 
         <!-- Product 1 -->
-        <article>
-          <header>
-            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="Product Image of a black Nike sneaker">
+        <article class ="product">
+          <header class ="product--lead">
+            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="Product Image of a black Nike sneaker" class= "product--lead--image">
           </header>
-          <h3>Nike Windmill 4</h3>
-          <p>Made for off road runs while enjoying the breeze you create.</p>
-          <form>
-            <fieldset>
+          <section class="product--lead--copy">
+            <h3>Nike Windmill 4</h3>
+            <p>Made for off road runs while enjoying the breeze you create.</p>
+          </section>
+          <form class="product--lead--copy--form">
+            <section>
               <legend>Colours</legend>
               <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+                <li><label class="product--lead--copy--form--colors--red"><input type="checkbox" name="colour" value="r"> Red</label></li>
+                <li><label class="product--lead--copy--form--colors--white"><input type="checkbox" name="colour" value="w"> White</label></li>
+                <li><label class="product--lead--copy--form--colors--blue"><input type="checkbox" name="colour" value="b"> Blue</label></li>
               </ul>
-            </fieldset>
+            </section>
 
-            <fieldset>
+            <section>
               <legend>Sizes</legend>
-              <ol>
+              <ul>
                 <li><label><input type="radio" name="size" value="m"> M</label></li>
                 <li><label><input type="radio" name="size" value="l"> L</label></li>
                 <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
+              </ul>
+            </section>
 
-            <footer>
+            <footer class="product--lead--copy--form--end">
               <dl>
                 <dt>Rating</dt>
                 <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
@@ -155,38 +142,40 @@
               <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
               <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
               <button type="button"><span class="material-icons">favorite</span></button>
-              <a href="#">see more</a>
+              <a href="#" class="product--lead--copy--form--end--button">See More </a>
             </footer>
           </form>
         </article>
 
         <!-- Product 2 -->
-        <article>
-          <header>
-            <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Product Image of a New Balance sneaker">
+        <article class ="product">
+          <header class ="product--lead">
+            <img src="https://images.unsplash.com/photo-1578116922645-3976907a7671?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" alt="Product Image of a Nike sneaker" class= "product--lead--image">
           </header>
-          <h3>New Balance Street Smart 2.0</h3>
+          <section class="product--lead--copy">
+          <h3>Nike Street Smart 2.0</h3>
           <p>Designed for urban casual wear, these durable sneakers will keep up with your pace.</p>
-          <form>
-            <fieldset>
+          </section>
+          <form class="product--lead--copy--form">
+            <section>
               <legend>Colours</legend>
               <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+                <li><label class="product--lead--copy--form--colors--red"><input type="checkbox" name="colour" value="r"> Red</label></li>
+                <li><label class="product--lead--copy--form--colors--white"><input type="checkbox" name="colour" value="w"> White</label></li>
+                <li><label class="product--lead--copy--form--colors--blue"><input type="checkbox" name="colour" value="b"> Blue</label></li>
               </ul>
-            </fieldset>
+            </section>
 
-            <fieldset>
+            <section>
               <legend>Sizes</legend>
-              <ol>
+              <ul>
                 <li><label><input type="radio" name="size" value="m"> M</label></li>
                 <li><label><input type="radio" name="size" value="l"> L</label></li>
                 <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
+              </ul>
+            </section>
 
-            <footer>
+            <footer class="product--lead--copy--form--end">
               <dl>
                 <dt>Rating</dt>
                 <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
@@ -200,32 +189,34 @@
         </article>
 
         <!-- Product 3 -->
-        <article>
-          <header>
-            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=643&q=80" alt="Product Image of a Van's sneaker">
+        <article class ="product">
+          <header class ="product--lead">
+            <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=643&q=80" alt="Product Image of a Van's sneaker" class= "product--lead--image">
           </header>
+          <section class="product--lead--copy">
           <h3>Vans Classic</h3>
           <p>These sneakers provide comfort, durability and a classic outlook for feet.</p>
-          <form>
-            <fieldset>
+          </section>
+          <form class="product--lead--copy--form">
+            <section>
               <legend>Colours</legend>
               <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+                <li><label class="product--lead--copy--form--colors--red"><input type="checkbox" name="colour" value="r"> Red</label></li>
+                <li><label class="product--lead--copy--form--colors--white"><input type="checkbox" name="colour" value="w"> White</label></li>
+                <li><label class="product--lead--copy--form--colors--blue"><input type="checkbox" name="colour" value="b"> Blue</label></li>
               </ul>
-            </fieldset>
+            </section>
 
-            <fieldset>
+            <section>
               <legend>Sizes</legend>
-              <ol>
+              <ul>
                 <li><label><input type="radio" name="size" value="m"> M</label></li>
                 <li><label><input type="radio" name="size" value="l"> L</label></li>
                 <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
+              </ul>
+            </section>
 
-            <footer>
+            <footer class="product--lead--copy--form--end">
               <dl>
                 <dt>Rating</dt>
                 <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
@@ -239,32 +230,34 @@
         </article>
   
         <!-- Product 4 -->
-        <article>
-          <header>
-            <img src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Product Image of a Nike Air Jordan 12 sneaker">
+        <article class ="product">
+          <header class ="product--lead">
+            <img src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Product Image of a Nike Air Jordan 12 sneaker" class= "product--lead--image">
           </header>
+          <section class="product--lead--copy">
           <h3>Nike Air Jordan 12</h3>
           <p>These pairs make a statement in the gym, showcase collection or even during a casual stroll in streets.</p>
-          <form>
-            <fieldset>
+          </section>
+          <form class="product--lead--copy--form">
+            <section>
               <legend>Colours</legend>
               <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+                <li><label class="product--lead--copy--form--colors--red"><input type="checkbox" name="colour" value="r"> Red</label></li>
+                <li><label class="product--lead--copy--form--colors--white"><input type="checkbox" name="colour" value="w"> White</label></li>
+                <li><label class="product--lead--copy--form--colors--blue"><input type="checkbox" name="colour" value="b"> Blue</label></li>
               </ul>
-            </fieldset>
+            </section>
 
-            <fieldset>
+            <section>
               <legend>Sizes</legend>
-              <ol>
+              <ul>
                 <li><label><input type="radio" name="size" value="m"> M</label></li>
                 <li><label><input type="radio" name="size" value="l"> L</label></li>
                 <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
+              </ul>
+            </section>
 
-            <footer>
+            <footer class="product--lead--copy--form--end">
               <dl>
                 <dt>Rating</dt>
                 <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
@@ -278,32 +271,34 @@
         </article>
 
         <!-- Product 5 -->
-        <article>
-          <header>
-            <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Product Image of a Nike Air Max 90 running shoe">
+        <article class ="product">
+          <header class ="product--lead">
+            <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Product Image of a Nike Air Max 90 running shoe" class= "product--lead--image">
           </header>
+          <section class="product--lead--copy">
           <h3>Nike Air Max 90</h3>
           <p>Equipped with air bubble technology, these running shoes provide greater stability and comfort for running.</p>
-          <form>
-            <fieldset>
+          </section>
+          <form class="product--lead--copy--form">
+            <section>
               <legend>Colours</legend>
               <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+                <li><label class="product--lead--copy--form--colors--red"><input type="checkbox" name="colour" value="r"> Red</label></li>
+                <li><label class="product--lead--copy--form--colors--white"><input type="checkbox" name="colour" value="w"> White</label></li>
+                <li><label class="product--lead--copy--form--colors--blue"><input type="checkbox" name="colour" value="b"> Blue</label></li>
               </ul>
-            </fieldset>
+            </section>
 
-            <fieldset>
+            <section>
               <legend>Sizes</legend>
-              <ol>
+              <ul>
                 <li><label><input type="radio" name="size" value="m"> M</label></li>
                 <li><label><input type="radio" name="size" value="l"> L</label></li>
                 <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
+              </ul>
+            </section>
 
-            <footer>
+            <footer class="product--lead--copy--form--end">
               <dl>
                 <dt>Rating</dt>
                 <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
@@ -329,19 +324,19 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="ending">
       <p>&copy; Copyright, 1991.</p>
       <nav aria-label="Legal">
         <ul>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Accessibility Policy</a></li>
+          <li><a href="#" class="ending--text">Terms of Use</a></li>
+          <li><a href="#" class="ending--text">Privacy Policy</a></li>
+          <li><a href="#" class="ending--text">Accessibility Policy</a></li>
         </ul>
       </nav>
       <ul>
-        <li><a href="#"><span class="material-icons">face</span> Facebook</a></li>
-        <li><a href="#"><span class="material-icons">camera_alt</span> Instagram</a></li>
-        <li><a href="#"><span class="material-icons">alternate_email</span> Twitter</a></li>
+        <li><a href="#" class="ending--text"><span class="material-icons">face</span> Facebook</a></li>
+        <li><a href="#" class="ending--text"><span class="material-icons">camera_alt</span> Instagram</a></li>
+        <li><a href="#" class="ending--text"><span class="material-icons">alternate_email</span> Twitter</a></li>
       </ul>
     </footer>
 
